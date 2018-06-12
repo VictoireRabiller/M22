@@ -103,3 +103,40 @@ echo "Produit2 TTC" . $product2->calculePriceTTC() . PHP_EOL;
 
 ​
 
+
+class Animal {
+	
+	public $hp;
+	public $armor;
+	public $damage;
+
+	function __construct($hp, $armor, $damage) {
+		$this->hp = $hp;
+		$this->armor = $armor;
+		$this->damage = $damage;
+	}
+
+}
+
+class Hero extends Animal {
+	public $name;
+
+	function __construct($hp, $armor, $damage, $name) {
+
+		parent::__construct($hp, $armor, $damage);
+
+		$this->name = $name;
+
+	}
+
+}
+
+$animal = new Animal(10, 2, 3);
+
+
+var_dump($animal);
+
+$hero = new Hero(20, 10, 50, 'Thrud');
+
+var_dump($hero);
+
