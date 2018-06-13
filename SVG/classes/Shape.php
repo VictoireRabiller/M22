@@ -1,37 +1,12 @@
 <?php
 
 abstract class Shape{
+	//classe abstraite ne peut pas etre utilisé directement : on ne peut pas $shape = new Shape(); pas possible
 
-	public $x;
-	public $y;
-
-	// public $width;
-	// public $height;
-
-	public $color;
-	public $opacity;
-
-	// public function __construct($width, $height){
-	// 	$this->x = 0;
-	// 	$this->y = 0;
-
-	// 	$this->color = 'black';
-	// 	$this->opacity = 1;
-
-		// $this->width = $width;
-		// $this->height = $height;
-
-	}
-
-// 	public function draw(){
-// 		$svg = <<<TXT
-
-// 		<rect x="{$this->x}" y="{$this->y}" width="{$this->width}" height="{$this->height}" opacity="{$this->opacity}" 
-// 	fill="{$this->color}" />
-// TXT;
-// 	return $svg;
-
-// 	}
+	public $x = 0;
+	public $y = 0;
+	public $color = 'black';
+	public $opacity = 1;
 
 	function setPosition($x, $y){
 		$this->x = $x;
